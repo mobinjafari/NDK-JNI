@@ -134,10 +134,10 @@ Java_org_lotka_ndksamples_CalcActivity_calcfun(
                 }
 
 
-                JNIEXPORT jarray JNICALL
-                Java_org_lotka_ndksamples_jnilistActivity_flist(JNIEnv *env, jobject thiz , jarray javaarray) {
-                    return javaarray;
-                }
+JNIEXPORT jarray JNICALL
+Java_org_lotka_ndksamples_jnilistActivity_flist(JNIEnv *env, jobject thiz, jarray javaarray) {
+    return javaarray;
+}
 
 
 JNIEXPORT jint JNICALL
