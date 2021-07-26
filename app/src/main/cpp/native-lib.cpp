@@ -44,17 +44,17 @@ extern "C" {
             }
 
 
-            JNIEXPORT jint  JNICALL
-            Java_org_lotka_ndksamples_CalcActivity_calcfun(
-                    JNIEnv *env,
-                    jobject thiaz,
-                    jint first,
-                    jint second,
-                    jint type) {
-                if (type == 1) {
-                    return first + second;
-                } else if (type == 2) {
-                    return first - second;
+JNIEXPORT jint JNICALL
+Java_org_lotka_ndksamples_CalcActivity_calcfun(
+        JNIEnv *env,
+        jobject thiaz,
+        jint first,
+        jint second,
+        jint type) {
+    if (type == 1) {
+        return first + second;
+    } else if (type == 2) {
+        return first - second;
                 } else if (type == 3) {
                     return first * second;
                 } else if (type == 4) {
@@ -140,17 +140,25 @@ extern "C" {
                 }
 
 
-                JNIEXPORT jint JNICALL
-                Java_org_lotka_ndksamples_A1121Activity_getversion1121(JNIEnv *env, jobject thiz) {
-                    return env->GetVersion();
-                }
+JNIEXPORT jint JNICALL
+Java_org_lotka_ndksamples_A1121Activity_getversion33(JNIEnv *env, jobject thiz) {
+    return env->GetVersion();
+}
 
 
-                JNIEXPORT jint JNICALL
-                Java_org_lotka_ndksamples_A1121Activity_fromreflected(JNIEnv *env, jobject thiz) {
-                    jmethodID jm = env->FromReflectedMethod(thiz);
-                    
-                }
+JNIEXPORT jint JNICALL
+Java_org_lotka_ndksamples_A1121Activity_getversion34(JNIEnv *env, jobject thiz) {
+    return env->GetVersion();
+}
+
+
+JNIEXPORT jint JNICALL
+Java_org_lotka_ndksamples_A1121Activity_fromreflected(JNIEnv *env, jobject thiz) {
+    jmethodID jm = env->FromReflectedMethod(thiz);
+
+}
+
+
 
 
 
