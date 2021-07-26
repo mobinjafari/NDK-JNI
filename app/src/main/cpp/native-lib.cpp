@@ -9,8 +9,6 @@
 
 using namespace std ;
 
-
-
 extern "C" {
 
 
@@ -134,8 +132,6 @@ extern "C" {
                     env->SetBooleanField(obj , myjfield45 , 1);
 
                 }
-
-
 
 
                 JNIEXPORT jarray JNICALL
