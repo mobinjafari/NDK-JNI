@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lotka.ndk_hello_world">
+    package="org.lotka.ndksamples">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/appcion"
+        android:label="Ndk Samples"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ndk_hello_world">
-        <activity android:name=".A1121Activity"></activity>
-        <activity android:name=".jnilistActivity" />
-        <activity android:name=".MyChangeActivity" />
-        <activity android:name=".ChangeVarActivity" />
-        <activity android:name=".TimeActivity" />
-        <activity android:name=".CalcActivity" />
-        <activity android:name=".SendAndChangeStringActivity" />
-        <activity android:name=".SendRetriveDataActivity" />
-        <activity android:name=".HelloWorldActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="org.lotka.ndksamples.A1121Activity"></activity>
+        <activity android:name="org.lotka.ndksamples.jnilistActivity" />
+        <activity android:name="org.lotka.ndksamples.MyChangeActivity" />
+        <activity android:name="org.lotka.ndksamples.ChangeVarActivity" />
+        <activity android:name="org.lotka.ndksamples.TimeActivity" />
+        <activity android:name="org.lotka.ndksamples.CalcActivity" />
+        <activity android:name="org.lotka.ndksamples.SendAndChangeStringActivity" />
+        <activity android:name="org.lotka.ndksamples.SendRetriveDataActivity" />
+        <activity android:name="org.lotka.ndksamples.HelloWorldActivity" />
+        <activity android:name="org.lotka.ndksamples.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

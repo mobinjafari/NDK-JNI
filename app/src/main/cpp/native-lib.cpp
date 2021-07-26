@@ -17,7 +17,7 @@ extern "C" {
 
 
             JNIEXPORT jstring JNICALL
-            Java_org_lotka_ndk_1hello_1world_HelloWorldActivity_helloFromJni(
+            Java_org_lotka_ndksamples_HelloWorldActivity_helloFromJni(
                     JNIEnv *env,
                     jobject) {
                 std::string hello = "Hello from C++";
@@ -26,7 +26,7 @@ extern "C" {
 
 
             JNIEXPORT jstring JNICALL
-            Java_org_lotka_ndk_1hello_1world_SendRetriveDataActivity_sendRetrivestring(
+            Java_org_lotka_ndksamples_SendRetriveDataActivity_sendRetrivestring(
                     JNIEnv *env,
                     jobject,
                     jstring s) {
@@ -35,7 +35,7 @@ extern "C" {
 
 
             JNIEXPORT jstring JNICALL
-            Java_org_lotka_ndk_1hello_1world_SendAndChangeStringActivity_sendretrivechangeddata(
+            Java_org_lotka_ndksamples_SendAndChangeStringActivity_sendretrivechangeddata(
                     JNIEnv *env,
                     jobject thiz,
                     jstring first) {
@@ -47,7 +47,7 @@ extern "C" {
 
 
             JNIEXPORT jint  JNICALL
-            Java_org_lotka_ndk_1hello_1world_CalcActivity_calcfun(
+            Java_org_lotka_ndksamples_CalcActivity_calcfun(
                     JNIEnv *env,
                     jobject thiaz,
                     jint first,
@@ -66,7 +66,7 @@ extern "C" {
 
 
             JNIEXPORT jlong JNICALL
-            Java_org_lotka_ndk_1hello_1world_TimeActivity_clock(
+            Java_org_lotka_ndksamples_TimeActivity_clock(
                     JNIEnv *env,
                     jobject thiaz) {
                 __android_log_write(ANDROID_LOG_INFO, LOG_TAG, "message here");
@@ -76,10 +76,10 @@ extern "C" {
 
 
             JNIEXPORT void JNICALL
-            Java_org_lotka_ndk_1hello_1world_ChangeVarActivity_changeValue2(
+            Java_org_lotka_ndksamples_ChangeVarActivity_changeValue2(
                     JNIEnv *env,
                     jclass  cls , jint javavalue) {
-                jclass wrapper = env->FindClass("org/lotka/ndk_hello_world/IntWrapper");
+                jclass wrapper = env->FindClass("org/lotka/ndksamples/IntWrapper");
                 jmethodID constructor = env->GetMethodID(wrapper, "<init>", "(I)V");
                 jobject wrapperObject = env->NewObject(wrapper, constructor ,javavalue );
                 jmethodID getInt = env->GetMethodID(wrapper, "getInt", "()I");
@@ -87,7 +87,7 @@ extern "C" {
                 printf("Wrapper value: %d\n", ret);
 
                 jmethodID inc3 = env->GetStaticMethodID(cls, "inc3",
-                                                        "(Lorg/lotka/ndk_hello_world/IntWrapper;)V");
+                                                        "(Lorg/lotka/ndksamples/IntWrapper;)V");
                 env->CallStaticVoidMethod(cls, inc3, wrapperObject);
 
                 ret = env->CallIntMethod(wrapperObject, getInt);
@@ -98,7 +98,7 @@ extern "C" {
 
 
                 JNIEXPORT void JNICALL
-                Java_org_lotka_ndk_1hello_1world_MyChangeActivity_myfunction4int(
+                Java_org_lotka_ndksamples_MyChangeActivity_myfunction4int(
                         JNIEnv *env ,
                         jclass cls,
                         jobject obj){
@@ -111,7 +111,7 @@ extern "C" {
 
 
                 JNIEXPORT void JNICALL
-                Java_org_lotka_ndk_1hello_1world_MyChangeActivity_myfunction4string(
+                Java_org_lotka_ndksamples_MyChangeActivity_myfunction4string(
                         JNIEnv *env ,
                         jclass cls,
                         jobject obj){
@@ -124,7 +124,7 @@ extern "C" {
 
 
                 JNIEXPORT void JNICALL
-                Java_org_lotka_ndk_1hello_1world_MyChangeActivity_myfunction4boolean(
+                Java_org_lotka_ndksamples_MyChangeActivity_myfunction4boolean(
                         JNIEnv *env ,
                         jclass cls,
                         jobject obj){
@@ -139,19 +139,19 @@ extern "C" {
 
 
                 JNIEXPORT jarray JNICALL
-                Java_org_lotka_ndk_1hello_1world_jnilistActivity_flist(JNIEnv *env, jobject thiz , jarray javaarray) {
+                Java_org_lotka_ndksamples_jnilistActivity_flist(JNIEnv *env, jobject thiz , jarray javaarray) {
                     return javaarray;
                 }
 
 
                 JNIEXPORT jint JNICALL
-                Java_org_lotka_ndk_1hello_1world_A1121Activity_getversion1121(JNIEnv *env, jobject thiz) {
+                Java_org_lotka_ndksamples_A1121Activity_getversion1121(JNIEnv *env, jobject thiz) {
                     return env->GetVersion();
                 }
 
 
                 JNIEXPORT jint JNICALL
-                Java_org_lotka_ndk_1hello_1world_A1121Activity_fromreflected(JNIEnv *env, jobject thiz) {
+                Java_org_lotka_ndksamples_A1121Activity_fromreflected(JNIEnv *env, jobject thiz) {
                     jmethodID jm = env->FromReflectedMethod(thiz);
                     
                 }

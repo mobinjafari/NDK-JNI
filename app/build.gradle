@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "org.lotka.ndk_hello_world"
+        applicationId "org.lotka.ndksamples"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

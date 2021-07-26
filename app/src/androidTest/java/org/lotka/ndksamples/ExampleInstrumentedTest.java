@@ -1,4 +1,4 @@
-package org.lotka.ndk_hello_world;
+package org.lotka.ndksamples;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("org.lotka.ndk_hello_world", appContext.getPackageName());
+        assertEquals("org.lotka.ndksamples", appContext.getPackageName());
     }
 }

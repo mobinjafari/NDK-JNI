@@ -1,4 +1,4 @@
-package org.lotka.ndk_hello_world;
+package org.lotka.ndksamples;
 
 import org.junit.Test;
 
